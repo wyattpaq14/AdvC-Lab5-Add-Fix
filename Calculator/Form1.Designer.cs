@@ -50,13 +50,18 @@ namespace Calculator
             this.btn8 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnReciprocal
             // 
             this.btnReciprocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReciprocal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnReciprocal.Location = new System.Drawing.Point(172, 124);
+            this.btnReciprocal.Location = new System.Drawing.Point(233, 124);
             this.btnReciprocal.Name = "btnReciprocal";
             this.btnReciprocal.Size = new System.Drawing.Size(32, 32);
             this.btnReciprocal.TabIndex = 42;
@@ -68,7 +73,7 @@ namespace Calculator
             // 
             this.btnSqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSqrt.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnSqrt.Location = new System.Drawing.Point(172, 84);
+            this.btnSqrt.Location = new System.Drawing.Point(233, 84);
             this.btnSqrt.Name = "btnSqrt";
             this.btnSqrt.Size = new System.Drawing.Size(32, 32);
             this.btnSqrt.TabIndex = 41;
@@ -80,7 +85,7 @@ namespace Calculator
             // 
             this.btnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.ForeColor = System.Drawing.Color.Red;
-            this.btnEquals.Location = new System.Drawing.Point(172, 164);
+            this.btnEquals.Location = new System.Drawing.Point(233, 164);
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(32, 72);
             this.btnEquals.TabIndex = 21;
@@ -92,7 +97,7 @@ namespace Calculator
             // 
             this.btnSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtract.ForeColor = System.Drawing.Color.Red;
-            this.btnSubtract.Location = new System.Drawing.Point(132, 164);
+            this.btnSubtract.Location = new System.Drawing.Point(193, 164);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(32, 32);
             this.btnSubtract.TabIndex = 39;
@@ -104,7 +109,7 @@ namespace Calculator
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Red;
-            this.btnAdd.Location = new System.Drawing.Point(132, 204);
+            this.btnAdd.Location = new System.Drawing.Point(193, 204);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(32, 32);
             this.btnAdd.TabIndex = 40;
@@ -116,7 +121,7 @@ namespace Calculator
             // 
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.Color.Red;
-            this.btnMultiply.Location = new System.Drawing.Point(132, 124);
+            this.btnMultiply.Location = new System.Drawing.Point(193, 124);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(32, 32);
             this.btnMultiply.TabIndex = 38;
@@ -128,7 +133,7 @@ namespace Calculator
             // 
             this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.ForeColor = System.Drawing.Color.Red;
-            this.btnDivide.Location = new System.Drawing.Point(132, 84);
+            this.btnDivide.Location = new System.Drawing.Point(193, 84);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(32, 32);
             this.btnDivide.TabIndex = 37;
@@ -140,7 +145,7 @@ namespace Calculator
             // 
             this.btnDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDecimal.Location = new System.Drawing.Point(92, 204);
+            this.btnDecimal.Location = new System.Drawing.Point(153, 204);
             this.btnDecimal.Name = "btnDecimal";
             this.btnDecimal.Size = new System.Drawing.Size(32, 32);
             this.btnDecimal.TabIndex = 36;
@@ -152,7 +157,7 @@ namespace Calculator
             // 
             this.btnSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSign.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnSign.Location = new System.Drawing.Point(52, 204);
+            this.btnSign.Location = new System.Drawing.Point(113, 204);
             this.btnSign.Name = "btnSign";
             this.btnSign.Size = new System.Drawing.Size(32, 32);
             this.btnSign.TabIndex = 35;
@@ -164,7 +169,7 @@ namespace Calculator
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Red;
-            this.btnClear.Location = new System.Drawing.Point(92, 44);
+            this.btnClear.Location = new System.Drawing.Point(153, 44);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(112, 32);
             this.btnClear.TabIndex = 24;
@@ -175,7 +180,7 @@ namespace Calculator
             // 
             this.btnBackSpace.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackSpace.ForeColor = System.Drawing.Color.Red;
-            this.btnBackSpace.Location = new System.Drawing.Point(12, 44);
+            this.btnBackSpace.Location = new System.Drawing.Point(73, 44);
             this.btnBackSpace.Name = "btnBackSpace";
             this.btnBackSpace.Size = new System.Drawing.Size(72, 32);
             this.btnBackSpace.TabIndex = 23;
@@ -186,7 +191,7 @@ namespace Calculator
             // 
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn7.Location = new System.Drawing.Point(12, 84);
+            this.btn7.Location = new System.Drawing.Point(73, 84);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(32, 32);
             this.btn7.TabIndex = 32;
@@ -198,7 +203,7 @@ namespace Calculator
             // 
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn4.Location = new System.Drawing.Point(12, 124);
+            this.btn4.Location = new System.Drawing.Point(73, 124);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(32, 32);
             this.btn4.TabIndex = 29;
@@ -210,7 +215,7 @@ namespace Calculator
             // 
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn5.Location = new System.Drawing.Point(52, 124);
+            this.btn5.Location = new System.Drawing.Point(113, 124);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(32, 32);
             this.btn5.TabIndex = 30;
@@ -222,7 +227,7 @@ namespace Calculator
             // 
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn6.Location = new System.Drawing.Point(92, 124);
+            this.btn6.Location = new System.Drawing.Point(153, 124);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(32, 32);
             this.btn6.TabIndex = 31;
@@ -234,7 +239,7 @@ namespace Calculator
             // 
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn1.Location = new System.Drawing.Point(12, 164);
+            this.btn1.Location = new System.Drawing.Point(73, 164);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(32, 32);
             this.btn1.TabIndex = 26;
@@ -246,7 +251,7 @@ namespace Calculator
             // 
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn2.Location = new System.Drawing.Point(52, 164);
+            this.btn2.Location = new System.Drawing.Point(113, 164);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(32, 32);
             this.btn2.TabIndex = 27;
@@ -258,7 +263,7 @@ namespace Calculator
             // 
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn3.Location = new System.Drawing.Point(92, 164);
+            this.btn3.Location = new System.Drawing.Point(153, 164);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(32, 32);
             this.btn3.TabIndex = 28;
@@ -270,7 +275,7 @@ namespace Calculator
             // 
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn9.Location = new System.Drawing.Point(92, 84);
+            this.btn9.Location = new System.Drawing.Point(153, 84);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(32, 32);
             this.btn9.TabIndex = 34;
@@ -282,7 +287,7 @@ namespace Calculator
             // 
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn8.Location = new System.Drawing.Point(52, 84);
+            this.btn8.Location = new System.Drawing.Point(113, 84);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(32, 32);
             this.btn8.TabIndex = 33;
@@ -294,29 +299,92 @@ namespace Calculator
             // 
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btn0.Location = new System.Drawing.Point(12, 204);
+            this.btn0.Location = new System.Drawing.Point(73, 204);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(32, 32);
             this.btn0.TabIndex = 25;
             this.btn0.Tag = "0";
             this.btn0.Text = "0";
+            this.btn0.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // txtDisplay
             // 
             this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplay.Location = new System.Drawing.Point(12, 12);
+            this.txtDisplay.Location = new System.Drawing.Point(73, 12);
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(192, 22);
+            this.txtDisplay.Size = new System.Drawing.Size(192, 24);
             this.txtDisplay.TabIndex = 22;
             this.txtDisplay.TabStop = false;
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(27, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 32);
+            this.button1.TabIndex = 43;
+            this.button1.Tag = "7";
+            this.button1.Text = "MC";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(27, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 32);
+            this.button2.TabIndex = 44;
+            this.button2.Tag = "7";
+            this.button2.Text = "MR";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Location = new System.Drawing.Point(27, 164);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(40, 32);
+            this.button3.TabIndex = 45;
+            this.button3.Tag = "7";
+            this.button3.Text = "MS";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button4.Location = new System.Drawing.Point(27, 202);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(40, 32);
+            this.button4.TabIndex = 46;
+            this.button4.Tag = "7";
+            this.button4.Text = "M+";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(27, 44);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(40, 32);
+            this.textBox1.TabIndex = 47;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "M";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 250);
+            this.ClientSize = new System.Drawing.Size(277, 250);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReciprocal);
             this.Controls.Add(this.btnSqrt);
             this.Controls.Add(this.btnEquals);
@@ -372,6 +440,11 @@ namespace Calculator
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

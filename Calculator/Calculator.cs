@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Calculator
 {
     public class Calculator
     {
-        private decimal currentValue;
+        public decimal currentValue;
         private decimal operand1;
-        private decimal operand2;
+        public decimal operand2;
         private Operator op;
 
-        public enum Operator {Addd, Subtract, Multiply, Divide, None };
+        public enum Operator { Addd, Subtract, Multiply, Divide, None };
 
         //Needed to be changed from private to public 
         public Calculator()
@@ -42,7 +43,7 @@ namespace Calculator
             this.operand1 = val;
             this.currentValue = val;
             this.op = Operator.Addd;
-       
+
         }
 
         public void Subtract(decimal val)
@@ -84,11 +85,21 @@ namespace Calculator
                     currentValue = operand1 * operand2;
                     break;
                 case Operator.Divide:
-                    currentValue = operand1 / operand2;
+                    //Try catch to prevent dividing by zero
+                    try
+                    {
+                        currentValue = operand1 / operand2;
+                    }
+                    catch (DivideByZeroException)
+                    {
+                        MessageBox.Show("You cannot divide by zero", "Error!");
+                    }
+
                     break;
                 case Operator.None:
                     currentValue = operand2;
                     break;
+
             }
             operand1 = currentValue;
         }

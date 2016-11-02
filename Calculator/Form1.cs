@@ -88,7 +88,8 @@ namespace Calculator
             if (!decimalEntered)
             {
                 displayString += ".";
-                displayValue = Convert.ToInt16(displayString);
+                //un-needed line of code?
+                //displayValue = Convert.ToInt16(displayString);
                 txtDisplay.Text = displayString;
                 decimalEntered = true;
             }
@@ -169,22 +170,15 @@ namespace Calculator
         {
 
             if (newValue)
-            {
                 Calc.Equals(displayValue);
-            }
-
             else
-            {
-                //Needed brackets???
                 Calc.Equals(displayValue);
-                displayValue = Calc.CurrentValue;
-                txtDisplay.Text = displayValue.ToString();
-                newValue = true;
-                decimalEntered = false;
-            }
-
-
+            displayValue = Calc.CurrentValue;
+            txtDisplay.Text = displayValue.ToString();
+            newValue = true;
+            decimalEntered = false;
         }
 
     }
+
 }
