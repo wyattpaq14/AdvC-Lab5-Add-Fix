@@ -15,12 +15,13 @@ namespace Calculator
 
         public enum Operator {Addd, Subtract, Multiply, Divide, None };
 
-        private Calculator()
+        //Needed to be changed from private to public 
+        public Calculator()
         {
-            this.currentValue = 0
-            this.operand1 = 0
-            this.operand2 = 0
-            this.op = Operator.None
+            this.currentValue = 0;
+            this.operand1 = 0;
+            this.operand2 = 0;
+            this.op = Operator.None;
         }
 
         public decimal CurrentValue
