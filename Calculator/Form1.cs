@@ -17,7 +17,7 @@ namespace Calculator
             InitializeComponent();
         }
 
-  
+
         private string displayString;
         private int displayValue;
 
@@ -35,7 +35,7 @@ namespace Calculator
             decimalEntered = false;
         }
 
-      
+
         private void btnNumber_Click(object sender, System.EventArgs e)
         {
             if (newValue)
@@ -49,7 +49,7 @@ namespace Calculator
             txtDisplay.Text = displayString;
         }
 
-     
+
         private void btnBackSpace_Click(object sender, System.EventArgs e)
         {
             if (!newValue)
@@ -63,7 +63,7 @@ namespace Calculator
                 }
                 else if (displayString.Length == 1)
                 {
-                    displayValue = calc.CurrentValue;
+                    displayValue = Calc.CurrentValue;
                     displayString = displayValue.ToString();
                     txtDisplay.Text = displayString;
                     newValue = true;
@@ -73,7 +73,7 @@ namespace Calculator
 
         private void btnClear_Click(object sender, System.EventArgs e)
         {
-            calc.Clear();
+            Calc.Clear();
             displayString = "";
             displayValue = 0;
             txtDisplay.Text = displayValue.ToString();
@@ -81,15 +81,15 @@ namespace Calculator
             decimalEntered = false;
         }
 
-     
+
         private void btnDecimal_Click(object sender, System.EventArgs e)
         {
-        
-                displayString += ".";
-                displayValue = Convert.ToInt16(displayString);
-                txtDisplay.Text = displayString;
-                decimalEntered = true;
-        
+
+            displayString += ".";
+            displayValue = Convert.ToInt16(displayString);
+            txtDisplay.Text = displayString;
+            decimalEntered = true;
+
         }
 
         private void btnSign_Click(object sender, System.EventArgs e)
@@ -100,44 +100,44 @@ namespace Calculator
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            calc.Add(displayValue);
+            Calc.Add(displayValue);
             newValue = true;
             decimalEntered = false;
-            displayValue = calc.CurrentValue;
+            displayValue = Calc.CurrentValue;
             txtDisplay.Text = displayValue.ToString();
         }
 
         private void btnSubtract_Click(object sender, System.EventArgs e)
         {
-            calc.Subtract(displayValue);
+            Calc.Subtract(displayValue);
             newValue = true;
             decimalEntered = false;
-            displayValue = calc.CurrentValue;
+            displayValue = Calc.CurrentValue;
             txtDisplay.Text = displayValue.ToString();
         }
 
         private void btnMultiply_Click(object sender, System.EventArgs e)
         {
-            calc.Multiply(displayValue);
+            Calc.Multiply(displayValue);
             newValue = true;
             decimalEntered = false;
-            displayValue = calc.CurrentValue;
+            displayValue = Calc.CurrentValue;
             txtDisplay.Text = displayValue.ToString();
         }
 
         private void btnDivide_Click(object sender, System.EventArgs e)
         {
-            calc.Divide(displayValue);
+            Calc.Divide(displayValue);
             newValue = true;
             decimalEntered = false;
-            displayValue = calc.CurrentValue;
+            displayValue = Calc.CurrentValue;
             txtDisplay.Text = displayValue.ToString();
         }
 
         private void btnSqrt_Click(object sender, System.EventArgs e)
         {
-            calc.SquareRoot(displayValue);
-            displayValue = calc.CurrentValue;
+            Calc.SquareRoot(displayValue);
+            displayValue = Calc.CurrentValue;
             txtDisplay.Text = displayValue.ToString();
         }
 
@@ -145,8 +145,8 @@ namespace Calculator
         {
             try
             {
-                calc.Reciprocal(displayValue);
-                displayValue = calc.CurrentValue;
+                Calc.Reciprocal(displayValue);
+                displayValue = Calc.CurrentValue;
                 txtDisplay.Text = displayValue.ToString();
             }
             catch (DivideByZeroException)
@@ -160,16 +160,23 @@ namespace Calculator
 
         private void btnEquals_Click(object sender, System.EventArgs e)
         {
-           
-                if (newValue)
-                    calc.Equals();
-                else
-                    calc.Equals(displayValue);
-                displayValue = calc.CurrentValue;
+
+            if (newValue)
+            {
+                Calc.Equals();
+            }
+
+            else
+            {
+                //Needed brackets???
+                Calc.Equals(displayValue);
+                displayValue = Calc.CurrentValue;
                 txtDisplay.Text = displayValue.ToString();
                 newValue = true;
                 decimalEntered = false;
-      
+            }
+
+
         }
 
     }
