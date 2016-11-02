@@ -30,6 +30,7 @@ namespace Calculator
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
+            //Initializes values
             displayValue = 0;
             displayString = "";
             newValue = true;
@@ -44,6 +45,7 @@ namespace Calculator
                 displayString = "";
                 newValue = false;
             }
+            //Sends button value to textbox
             displayString += ((Button)sender).Tag.ToString();
             displayValue = Convert.ToDecimal(displayString);
             txtDisplay.Text = displayString;
@@ -83,11 +85,17 @@ namespace Calculator
 
         private void btnDecimal_Click(object sender, System.EventArgs e)
         {
-
-            displayString += ".";
-            displayValue = Convert.ToInt16(displayString);
-            txtDisplay.Text = displayString;
-            decimalEntered = true;
+            if (!decimalEntered)
+            {
+                displayString += ".";
+                displayValue = Convert.ToInt16(displayString);
+                txtDisplay.Text = displayString;
+                decimalEntered = true;
+            }
+            else
+            {
+                MessageBox.Show("You can only input 1 decimal!", "Error!");
+            }
 
         }
 
@@ -162,7 +170,7 @@ namespace Calculator
 
             if (newValue)
             {
-                Calc.Equals();
+                Calc.Equals(displayValue);
             }
 
             else

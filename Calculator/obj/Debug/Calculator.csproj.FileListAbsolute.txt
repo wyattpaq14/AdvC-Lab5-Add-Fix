@@ -42,3 +42,6 @@ C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\obj\Debug\Calculator.cs
 C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\obj\Debug\Calculator.Form1.resources
 C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\bin\Debug\Calculator.exe
+C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\bin\Debug\Calculator.pdb
+C:\Users\paqui\Source\Repos\AdvC-Lab5-Add-Fix\Calculator\obj\Debug\Calculator.pdb

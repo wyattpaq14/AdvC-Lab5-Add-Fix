@@ -41,6 +41,7 @@ namespace Calculator
         {
             this.operand1 = val;
             this.currentValue = val;
+            this.op = Operator.Addd;
        
         }
 
@@ -48,14 +49,16 @@ namespace Calculator
         {
             this.operand1 = val;
             this.currentValue = val;
-           
+            this.op = Operator.Subtract;
+
         }
 
         public void Multiply(decimal val)
         {
             this.operand1 = val;
             this.currentValue = val;
-           
+            this.op = Operator.Multiply;
+
         }
 
         public void Divide(decimal val)
