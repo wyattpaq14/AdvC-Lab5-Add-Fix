@@ -57,7 +57,8 @@ namespace Calculator
                 if (displayString.Length > 1)
                 {
                     displayString = displayString.Substring(0, displayString.Length - 1);
-                    displayValue = Convert.ToDecimal(displayString);
+                    //Needs to be ocnverted to Int not Decimal
+                    displayValue = Convert.ToInt32(displayString);
                     txtDisplay.Text = displayString;
                 }
                 else if (displayString.Length == 1)
