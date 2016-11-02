@@ -44,7 +44,8 @@ namespace Calculator
                 newValue = false;
             }
             displayString += ((Button)sender).Tag.ToString();
-            displayValue = Convert.ToDecimal(displayString);
+            //Needs to be converted to Int not Decimal
+            displayValue = Convert.ToInt32(displayString);
             txtDisplay.Text = displayString;
         }
 
