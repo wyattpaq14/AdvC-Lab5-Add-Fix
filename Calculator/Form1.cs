@@ -19,7 +19,8 @@ namespace Calculator
 
 
         private string displayString;
-        private int displayValue;
+        //Needs to be decimal
+        private decimal displayValue;
 
 
         private bool newValue;
@@ -44,8 +45,7 @@ namespace Calculator
                 newValue = false;
             }
             displayString += ((Button)sender).Tag.ToString();
-            //Needs to be converted to Int not Decimal
-            displayValue = Convert.ToInt32(displayString);
+            displayValue = Convert.ToDecimal(displayString);
             txtDisplay.Text = displayString;
         }
 
@@ -57,8 +57,7 @@ namespace Calculator
                 if (displayString.Length > 1)
                 {
                     displayString = displayString.Substring(0, displayString.Length - 1);
-                    //Needs to be ocnverted to Int not Decimal
-                    displayValue = Convert.ToInt32(displayString);
+                    displayValue = Convert.ToDecimal(displayString);
                     txtDisplay.Text = displayString;
                 }
                 else if (displayString.Length == 1)
