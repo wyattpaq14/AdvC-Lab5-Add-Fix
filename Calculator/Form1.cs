@@ -28,6 +28,11 @@ namespace Calculator
 
         private Calculator Calc = new Calculator();
 
+        //define MemoryCalculator class
+
+        private MemoryCalculator calcMem = new MemoryCalculator(0);
+
+
         private void Form1_Load(object sender, System.EventArgs e)
         {
             //Initializes values
@@ -179,6 +184,39 @@ namespace Calculator
             decimalEntered = false;
         }
 
+        private void btnMS_Click(object sender, EventArgs e)
+        {
+            //pass displayValue to the MemoryCalculator class
+            calcMem = new MemoryCalculator(displayValue);
+            calcMem.memoryStore();
+            txtMemory.Text = 'M'.ToString();
+        }
+
+        private void btnMAdd_Click(object sender, EventArgs e)
+        {
+            calcMem = new MemoryCalculator(displayValue.ToString());
+            calcMem.memoryAdd();
+            txtMemory.Text = 'M'.ToString();
+        }
+
+        private void btnMC_Click(object sender, EventArgs e)
+        {
+            calcMem.memoryClear();
+            txtMemory.Text = ' '.ToString();
+            
+        }
+
+        private void btnMR_Click(object sender, EventArgs e)
+        {
+            //store recalled memory into a variable to be used to display text, and set displayValue text
+            decimal recalledMemory = calcMem.memoryRecall();
+            displayValue = recalledMemory;
+            txtDisplay.Text = (recalledMemory.ToString());
+
+            //reset memory after it is recalled
+            calcMem.memoryClear();
+            txtMemory.Text = ' '.ToString();
+        }
     }
 
 }

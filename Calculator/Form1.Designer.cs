@@ -50,11 +50,11 @@ namespace Calculator
             this.btn8 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.txtDisplay = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnMC = new System.Windows.Forms.Button();
+            this.btnMR = new System.Windows.Forms.Button();
+            this.btnMS = new System.Windows.Forms.Button();
+            this.btnMAdd = new System.Windows.Forms.Button();
+            this.txtMemory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnReciprocal
@@ -313,78 +313,81 @@ namespace Calculator
             this.txtDisplay.Location = new System.Drawing.Point(73, 12);
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(192, 24);
+            this.txtDisplay.Size = new System.Drawing.Size(192, 22);
             this.txtDisplay.TabIndex = 22;
             this.txtDisplay.TabStop = false;
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button1
+            // btnMC
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(27, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 32);
-            this.button1.TabIndex = 43;
-            this.button1.Tag = "7";
-            this.button1.Text = "MC";
+            this.btnMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMC.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMC.Location = new System.Drawing.Point(27, 83);
+            this.btnMC.Name = "btnMC";
+            this.btnMC.Size = new System.Drawing.Size(40, 32);
+            this.btnMC.TabIndex = 43;
+            this.btnMC.Tag = "7";
+            this.btnMC.Text = "MC";
+            this.btnMC.Click += new System.EventHandler(this.btnMC_Click);
             // 
-            // button2
+            // btnMR
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Location = new System.Drawing.Point(27, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 32);
-            this.button2.TabIndex = 44;
-            this.button2.Tag = "7";
-            this.button2.Text = "MR";
+            this.btnMR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMR.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMR.Location = new System.Drawing.Point(27, 124);
+            this.btnMR.Name = "btnMR";
+            this.btnMR.Size = new System.Drawing.Size(40, 32);
+            this.btnMR.TabIndex = 44;
+            this.btnMR.Tag = "7";
+            this.btnMR.Text = "MR";
+            this.btnMR.Click += new System.EventHandler(this.btnMR_Click);
             // 
-            // button3
+            // btnMS
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Location = new System.Drawing.Point(27, 164);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 32);
-            this.button3.TabIndex = 45;
-            this.button3.Tag = "7";
-            this.button3.Text = "MS";
+            this.btnMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMS.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMS.Location = new System.Drawing.Point(27, 164);
+            this.btnMS.Name = "btnMS";
+            this.btnMS.Size = new System.Drawing.Size(40, 32);
+            this.btnMS.TabIndex = 45;
+            this.btnMS.Tag = "7";
+            this.btnMS.Text = "MS";
+            this.btnMS.Click += new System.EventHandler(this.btnMS_Click);
             // 
-            // button4
+            // btnMAdd
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Location = new System.Drawing.Point(27, 202);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 32);
-            this.button4.TabIndex = 46;
-            this.button4.Tag = "7";
-            this.button4.Text = "M+";
+            this.btnMAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMAdd.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnMAdd.Location = new System.Drawing.Point(27, 202);
+            this.btnMAdd.Name = "btnMAdd";
+            this.btnMAdd.Size = new System.Drawing.Size(40, 32);
+            this.btnMAdd.TabIndex = 46;
+            this.btnMAdd.Tag = "7";
+            this.btnMAdd.Text = "M+";
+            this.btnMAdd.Click += new System.EventHandler(this.btnMAdd_Click);
             // 
-            // textBox1
+            // txtMemory
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(27, 44);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(40, 32);
-            this.textBox1.TabIndex = 47;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "M";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMemory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemory.Location = new System.Drawing.Point(27, 44);
+            this.txtMemory.Multiline = true;
+            this.txtMemory.Name = "txtMemory";
+            this.txtMemory.ReadOnly = true;
+            this.txtMemory.Size = new System.Drawing.Size(40, 32);
+            this.txtMemory.TabIndex = 47;
+            this.txtMemory.TabStop = false;
+            this.txtMemory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 250);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtMemory);
+            this.Controls.Add(this.btnMAdd);
+            this.Controls.Add(this.btnMS);
+            this.Controls.Add(this.btnMR);
+            this.Controls.Add(this.btnMC);
             this.Controls.Add(this.btnReciprocal);
             this.Controls.Add(this.btnSqrt);
             this.Controls.Add(this.btnEquals);
@@ -440,11 +443,11 @@ namespace Calculator
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.TextBox txtDisplay;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnMC;
+        private System.Windows.Forms.Button btnMR;
+        private System.Windows.Forms.Button btnMS;
+        private System.Windows.Forms.Button btnMAdd;
+        private System.Windows.Forms.TextBox txtMemory;
     }
 }
 

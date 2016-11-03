@@ -8,15 +8,35 @@ namespace Calculator
 {
     public class MemoryCalculator : Calculator
     {
+        //variable to hold the memory
         private static decimal memoryStorage;
+        private static string dispValue;
 
-        public MemoryCalculator(decimal memoryStorage)
+        public MemoryCalculator(decimal memory)
         {
 
-            this.MemoryStorage = memoryStorage;
+            this.MemoryStorage = memory;
         }
 
-       
+        //added string constructor to get the display value from form1
+        //this will allow me to add what ever is inputed to be added to memoryStorage (MemoryAdd function)
+        public MemoryCalculator(string displayValue)
+        {
+
+            this.DisplayValue = displayValue;
+        }
+
+        public string DisplayValue
+        {
+            get
+            {
+                return dispValue;
+            }
+            set
+            {
+                dispValue = value;
+            }
+        }
 
         public decimal MemoryStorage
         {
@@ -30,14 +50,25 @@ namespace Calculator
             }
         }
 
-        public void memoryStore()
+        public decimal memoryStore()
         {
             //save memoryStorage
+            memoryStorage = this.MemoryStorage;
+
+            //going to return this to put in the txtMemory text box
+
+            return memoryStorage;
         }
 
-        public void memoryAdd()
+        public decimal memoryAdd()
         {
+            //declare array to define what numbers to add 
+
+            decimal[] addens = { Convert.ToDecimal(this.DisplayValue), memoryStorage };
             //add memoryStorage and current value
+            memoryStorage = addens.Sum();
+            return memoryStorage;
+
         }
         public void memoryClear()
         {
@@ -46,9 +77,11 @@ namespace Calculator
         }
 
 
-        public void memoryRecall()
+        public decimal memoryRecall()
         {
             // return memoryStorage
+            return memoryStorage;
+
         }
 
 
